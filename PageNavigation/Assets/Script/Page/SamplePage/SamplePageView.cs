@@ -1,6 +1,5 @@
 ﻿using Assets.Script.Base.Page;
 using UnityEngine;
-using System;
 
 namespace Assets.Script.Page.SamplePage
 {

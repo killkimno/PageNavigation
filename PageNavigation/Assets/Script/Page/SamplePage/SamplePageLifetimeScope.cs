@@ -1,3 +1,4 @@
+using Assets.Script.Base.Page;
 using Assets.Script.Page.SamplePage;
 using UnityEngine;
 using VContainer;
@@ -10,7 +11,7 @@ public class SamplePageLifetimeScope : LifetimeScope
 
     protected override void Configure(IContainerBuilder builder)
     {
-        builder.Register<SamplePagePresenter>(Lifetime.Scoped);
+        builder.Register<SamplePagePresenter>(Lifetime.Scoped).As<IUILifetime>();
         //view를 등록하나 인터페이스만 등록한다
         builder.RegisterComponent<SamplePageView>(_view).AsImplementedInterfaces();
     }
