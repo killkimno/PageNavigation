@@ -1,5 +1,10 @@
-﻿using Assets.Script.Page;
+﻿using Assets.Script.Base.Navigator;
+using Assets.Script.Base.Page;
+using Assets.Script.Page;
+using Assets.Script.Page.SamplePage;
 using Cysharp.Threading.Tasks;
+using System.Diagnostics;
+using System.Reflection;
 using System.Threading;
 using VContainer.Unity;
 
@@ -7,14 +12,16 @@ namespace Assets.Script
 {
     public class SampleStarter : IInitializable
     {
-        public SampleStarter()
+        private readonly PageNavigator _pageNavigator;
+
+        public SampleStarter(PageNavigator pageNavigator)
         {
-            UnityEngine.Debug.Log("Start Sample");
+            _pageNavigator = pageNavigator;
         }
 
         public void Initialize()
         {
-            throw new System.NotImplementedException();
+            _pageNavigator.OpenAsync(PageType.Sample).Forget();
         }
     }
 }

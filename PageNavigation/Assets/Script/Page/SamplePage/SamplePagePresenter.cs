@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 
 namespace Assets.Script.Page.SamplePage
 {
+    [PrefabPath("Prefab/PageSample")]
     public class SamplePagePresenter : BasePresenter, ISampleViewMessage
     {
         public SamplePagePresenter(IUIView view) : base(view)
