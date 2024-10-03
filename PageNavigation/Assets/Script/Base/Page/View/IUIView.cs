@@ -5,7 +5,7 @@ namespace Script.Base.Page
 {
     public interface IUIView
     {
-        GameObject GetGameObject();
+        void SetRoot(Transform root);
         void EnableView(bool enable);
         UniTask OpenAsync();
         UniTask CloseAsync();

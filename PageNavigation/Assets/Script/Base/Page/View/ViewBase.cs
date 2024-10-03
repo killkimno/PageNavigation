@@ -5,7 +5,15 @@ namespace Script.Base.Page
 {
     public class ViewBase : MonoBehaviour, IUIView
     {
-        public GameObject GetGameObject() => gameObject;
+        public void SetRoot(Transform root)
+        {
+            gameObject.transform.SetParent(root);
+            var rect = GetComponent<RectTransform>();
+
+            rect.anchorMin = new Vector2(0.5f, 0.5f);
+            rect.anchorMax = new Vector2(0.5f, 0.5f);
+            rect.anchoredPosition = Vector3.zero;
+        }
 
         public void EnableView(bool enable) => gameObject.SetActive(enable);
 

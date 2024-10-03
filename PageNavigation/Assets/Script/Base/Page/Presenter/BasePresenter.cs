@@ -48,13 +48,7 @@ namespace Script.Base.Page
 
         public void EnableView(bool enable) => _uIView.EnableView(enable);
 
-        public void SetRoot(Transform transform)
-        {
-            var obj = _uIView.GetGameObject();
-            obj.transform.SetParent(transform);
-            obj.transform.localPosition = Vector3.zero;
-
-        }
+        public void SetRoot(Transform transform) => _uIView.SetRoot(transform);
 
         public UniTask<bool> ProceedBeforeCloseAsync() => throw new System.NotImplementedException();
     }
