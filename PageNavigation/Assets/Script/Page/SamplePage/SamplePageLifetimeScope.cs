@@ -1,18 +1,19 @@
-using Assets.Script.Base.Page;
-using Assets.Script.Page.SamplePage;
+using Script.Base.Page;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-public class SamplePageLifetimeScope : LifetimeScope
+namespace Script.Page.SamplePage
 {
-    [SerializeField]
-    private SamplePageView _view;
-
-    protected override void Configure(IContainerBuilder builder)
+    public class SamplePageLifetimeScope : LifetimeScope
     {
-        builder.Register<SamplePagePresenter>(Lifetime.Scoped).As<IUILifetime>();
-        //view를 등록하나 인터페이스만 등록한다
-        builder.RegisterComponent<SamplePageView>(_view).AsImplementedInterfaces();
+        [SerializeField]
+        private SamplePageView _view;
+
+        protected override void Configure(IContainerBuilder builder)
+        {
+            builder.Register<SamplePagePresenter>(Lifetime.Scoped).As<IUILifetime>();
+            builder.RegisterComponent<SamplePageView>(_view).AsImplementedInterfaces();
+        }
     }
 }

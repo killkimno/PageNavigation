@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace Assets.Script.Base.Page
+namespace Script.Base.Page
 {
     public interface IUILifetime
     {

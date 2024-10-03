@@ -1,4 +1,4 @@
-﻿namespace Assets.Script.Page
+﻿namespace Script.Page
 {
     public enum PageType
     {

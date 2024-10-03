@@ -1,6 +1,6 @@
-﻿using Assets.Script.Base.Page;
+﻿using Script.Base.Page;
 
-namespace Assets.Script.Page.SamplePage
+namespace Script.Page.SamplePage
 {
 
     public interface ISampleView : IUIView<ISampleViewMessage>

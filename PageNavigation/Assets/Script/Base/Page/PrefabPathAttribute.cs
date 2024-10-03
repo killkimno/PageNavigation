@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Script.Base.Page
+namespace Script.Base.Page
 {
     public class PrefabPathAttribute : Attribute
     {

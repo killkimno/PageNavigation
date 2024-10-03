@@ -1,8 +1,8 @@
-﻿using Assets.Script.Base.Navigator;
-using Assets.Script.Base.Page;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Script.Base.Navigator;
+using Script.Base.Page;
 
-namespace Assets.Script.Page.SamplePage
+namespace Script.Page.SamplePage
 {
     [PrefabPath("Prefab/PageSample")]
     public class SamplePagePresenter : BasePresenter, ISampleViewMessage

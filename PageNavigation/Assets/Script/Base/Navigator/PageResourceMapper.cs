@@ -1,13 +1,9 @@
-﻿using Assets.Script.Base.Page;
-using Assets.Script.Page;
-using Assets.Script.Page.SamplePage;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Script.Page;
+using Script.Page.SamplePage;
 
-namespace Assets.Script.Base.Navigator
+namespace Script.Base.Navigator
 {
     public class PageResourceMapper
     {

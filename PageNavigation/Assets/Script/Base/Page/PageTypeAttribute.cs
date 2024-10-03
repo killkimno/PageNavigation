@@ -1,7 +1,7 @@
-﻿using Assets.Script.Page;
-using System;
+﻿using System;
+using Script.Page;
 
-namespace Assets.Script.Base.Page
+namespace Script.Base.Page
 {
     public class PageTypeAttribute : Attribute
     {

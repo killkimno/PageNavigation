@@ -1,7 +1,7 @@
-﻿using Assets.Script.Base.Page;
+﻿using Script.Base.Page;
 using UnityEngine;
 
-namespace Assets.Script.Page.SamplePage
+namespace Script.Page.SamplePage
 {
     public class SamplePageView : ViewBase, ISampleView
     {

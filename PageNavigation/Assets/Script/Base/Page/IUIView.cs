@@ -1,12 +1,13 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Script.Base.Page
+namespace Script.Base.Page
 {
     public interface IUIView
     {
         GameObject GetGameObject { get; }
-        UniTask OpenAsync();        
+        void EnableView(bool enable);
+        UniTask OpenAsync();
     }
 
     public interface IUIView<TMessage> : IUIView
@@ -14,5 +15,4 @@ namespace Assets.Script.Base.Page
         //p <-->v 간 통신
         void SetViewMessage(TMessage message);
     }
-
 }
