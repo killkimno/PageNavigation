@@ -83,10 +83,13 @@ namespace Script.Base.Navigator
                 await current.Presenter.OnCloseAsync();
                 current.Presenter.OnAfterCloseAsync().Forget();
                 current.NavigationTag.SetClosed();
+                current.Presenter.DestroyView();
+
                 _pageList.Remove(current);
 
                 //이전걸 연다
                 var previous = _pageList.Last();
+                previous.Presenter.EnableView(true);
                 await previous.Presenter.OnBeforeOpenAsync();
                 await previous.Presenter.OnOpenAsync();
                 previous.Presenter.OnAfterOpenAsync().Forget();

@@ -10,5 +10,7 @@ namespace Script.Base.Page.Presenter
         UniTask OnBeforeCloseAsync();
         UniTask OnCloseAsync();
         UniTask OnAfterCloseAsync();
+
+        void DestroyView();
     }
 }

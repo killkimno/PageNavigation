@@ -9,6 +9,7 @@ namespace Script.Base.Page.View
         void EnableView(bool enable);
         UniTask OpenAsync();
         UniTask CloseAsync();
+        void DestroyView();
     }
 
     public interface IUIView<TMessage> : IUIView

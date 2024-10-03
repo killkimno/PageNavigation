@@ -2,6 +2,7 @@
 using Script.Base.Navigator;
 using Script.Base.Page;
 using Script.Base.Page.Presenter;
+using UnityEngine;
 
 namespace Script.Page.SamplePage
 {
@@ -34,6 +35,10 @@ namespace Script.Page.SamplePage
         public void OnClickOpenShop() => UniTask.Void(async () =>
         {
             var tag = await _pageNavigator.OpenAsync(PageType.Shop);
+
+            await tag.AwaitAsync();
+
+            Debug.Log($"complete");
         });
     }
 }

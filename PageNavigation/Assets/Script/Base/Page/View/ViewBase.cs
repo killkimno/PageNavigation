@@ -26,5 +26,10 @@ namespace Script.Base.Page.View
         {
             await UniTask.CompletedTask;
         }
+
+        public virtual void DestroyView()
+        {
+            Destroy(gameObject);
+        }
     }
 }

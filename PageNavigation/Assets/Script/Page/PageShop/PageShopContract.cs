@@ -9,6 +9,7 @@ namespace Script.Page.PageShop
 
     public interface IPageShopViewMessage
     {
+        void OnClickBack();
     }
 
     public class PageShopParam : PageParam

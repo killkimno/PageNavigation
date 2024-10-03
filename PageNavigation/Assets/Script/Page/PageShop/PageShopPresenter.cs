@@ -10,9 +10,15 @@ namespace Script.Page.PageShop
     {
         private readonly IUIView _view;
 
-        public PageShopPresenter(PageNavigator pageNavigator, IUIView view) : base(pageNavigator, view)
+        public PageShopPresenter(PageNavigator pageNavigator, IPageShopView view) : base(pageNavigator, view)
         {
             _view = view;
+            view.SetViewMessage(this);
+        }
+
+        public void OnClickBack()
+        {
+            DoTryClose();
         }
     }
 }
