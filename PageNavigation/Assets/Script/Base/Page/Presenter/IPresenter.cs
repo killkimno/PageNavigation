@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Script.Base.Page
+namespace Script.Base.Page.Presenter
 {
     public interface IPresenter : IUILifetime
     {

@@ -1,6 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Script.Base.Navigator;
 using Script.Base.Page;
+using Script.Base.Page.Presenter;
 
 namespace Script.Page.SamplePage
 {

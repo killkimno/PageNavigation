@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Script.Base.Page
+namespace Script.Base.Page.View
 {
     public interface IUIView
     {

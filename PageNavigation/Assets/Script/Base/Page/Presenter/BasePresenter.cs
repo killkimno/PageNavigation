@@ -1,8 +1,9 @@
 using Cysharp.Threading.Tasks;
 using Script.Base.Navigator;
+using Script.Base.Page.View;
 using UnityEngine;
 
-namespace Script.Base.Page
+namespace Script.Base.Page.Presenter
 {
     public class BasePresenter : IPresenter
     {

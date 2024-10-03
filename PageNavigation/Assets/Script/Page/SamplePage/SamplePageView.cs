@@ -1,4 +1,5 @@
 ﻿using Script.Base.Page;
+using Script.Base.Page.View;
 using UnityEngine;
 
 namespace Script.Page.SamplePage

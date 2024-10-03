@@ -1,5 +1,7 @@
 using Script.Base.Navigator;
 using Script.Base.Page;
+using Script.Base.Page.Presenter;
+using Script.Base.Page.View;
 
 namespace Script.Page.PageShop
 {
