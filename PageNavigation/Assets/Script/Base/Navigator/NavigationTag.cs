@@ -21,7 +21,7 @@ namespace Script.Base.Navigator
 
         public async UniTask AwaitAsync()
         {
-            await UniTask.WaitWhile(() => Closed);
+            await UniTask.WaitWhile(() => !Closed);
         }
     }
 }
