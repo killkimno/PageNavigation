@@ -5,7 +5,7 @@ namespace Script.Base.Page
 {
     public class ViewBase : MonoBehaviour, IUIView
     {
-        public GameObject GetGameObject => gameObject;
+        public GameObject GetGameObject() => gameObject;
 
         public void EnableView(bool enable) => gameObject.SetActive(enable);
 
@@ -14,5 +14,9 @@ namespace Script.Base.Page
             await UniTask.CompletedTask;
         }
 
+        public async UniTask CloseAsync()
+        {
+            await UniTask.CompletedTask;
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace Script.Base.Page
         UniTask OnOpenAsync();
         UniTask OnAfterOpenAsync();
         UniTask OnBeforeCloseAsync();
+        UniTask OnCloseAsync();
         UniTask OnAfterCloseAsync();
     }
 }

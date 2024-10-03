@@ -7,8 +7,9 @@ namespace Script.Page.SamplePage
     [PrefabPath("Prefab/PageSample")]
     public class SamplePagePresenter : BasePresenter, ISampleViewMessage
     {
-        public SamplePagePresenter(IUIView view, PageResourceMapper resourceMapper) : base(view)
+        public SamplePagePresenter(ISampleView view, PageNavigator pageNavigator) : base(pageNavigator, view)
         {
+            view.SetViewMessage(this);
             UnityEngine.Debug.Log("BasePresenter");
         }
 
@@ -29,9 +30,9 @@ namespace Script.Page.SamplePage
             await base.OnAfterCloseAsync();
         }
 
-        public void OnClickTest()
+        public void OnClickOpenShop() => UniTask.Void(async () =>
         {
-            throw new System.NotImplementedException();
-        }
+            var tag = await _pageNavigator.OpenAsync(PageType.Shop);
+        });
     }
 }

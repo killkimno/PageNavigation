@@ -2,6 +2,7 @@
 {
     public enum PageType
     {
-        Sample
+        Sample,
+        Shop
     }
 }

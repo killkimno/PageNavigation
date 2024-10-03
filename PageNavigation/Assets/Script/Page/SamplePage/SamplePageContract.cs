@@ -3,7 +3,7 @@
 namespace Script.Page.SamplePage
 {
 
-    public interface ISampleView : IUIView<ISampleViewMessage>
+    public interface ISampleView : IUIView<ISampleViewMessage>, ISampleViewMessage
     {
         //presenter to view
         void RenderUI();
@@ -12,7 +12,7 @@ namespace Script.Page.SamplePage
     public interface ISampleViewMessage
     {
         //view to presenter
-        void OnClickTest();
+        void OnClickOpenShop();
     }
 
     public class SamplePageParam : PageParam

@@ -5,9 +5,10 @@ namespace Script.Base.Page
 {
     public interface IUIView
     {
-        GameObject GetGameObject { get; }
+        GameObject GetGameObject();
         void EnableView(bool enable);
         UniTask OpenAsync();
+        UniTask CloseAsync();
     }
 
     public interface IUIView<TMessage> : IUIView

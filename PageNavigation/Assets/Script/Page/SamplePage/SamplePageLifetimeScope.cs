@@ -12,7 +12,7 @@ namespace Script.Page.SamplePage
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<SamplePagePresenter>(Lifetime.Scoped).As<IUILifetime>();
+            builder.Register<SamplePagePresenter>(Lifetime.Scoped).As<IPresenter>();
             builder.RegisterComponent<SamplePageView>(_view).AsImplementedInterfaces();
         }
     }

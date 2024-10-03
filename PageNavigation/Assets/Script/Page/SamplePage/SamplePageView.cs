@@ -18,5 +18,7 @@ namespace Script.Page.SamplePage
         {
             _message = message;
         }
+
+        public void OnClickOpenShop() => _message.OnClickOpenShop();
     }
 }
