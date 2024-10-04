@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Cysharp.Threading.Tasks;
-using Script.Base.Navigator.MultipleOpener;
+using Script.Base.Navigator.MultiOpener;
 using Script.Base.Page;
 using Script.Base.Page.Presenter;
 using Script.Page;

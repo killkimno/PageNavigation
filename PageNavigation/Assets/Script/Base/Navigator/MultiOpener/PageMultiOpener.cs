@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using Script.Base.Page;
 using Script.Page;
 
-namespace Script.Base.Navigator.MultipleOpener
+namespace Script.Base.Navigator.MultiOpener
 {
     public class PageMultiOpenerModel
     {
