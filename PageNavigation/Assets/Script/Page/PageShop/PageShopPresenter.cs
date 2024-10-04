@@ -6,6 +6,7 @@ using Script.Base.Page.View;
 namespace Script.Page.PageShop
 {
     [PrefabPath("Prefab/PageShop")]
+    [PageLayer(0)]
     public class PageShopPresenter : BasePresenter, IPageShopViewMessage
     {
         private readonly IUIView _view;
