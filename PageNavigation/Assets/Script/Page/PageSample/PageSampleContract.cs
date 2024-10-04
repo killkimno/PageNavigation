@@ -1,7 +1,7 @@
 ﻿using Script.Base.Page;
 using Script.Base.Page.View;
 
-namespace Script.Page.SamplePage
+namespace Script.Page.PageSample
 {
 
     public interface ISampleView : IUIView<ISampleViewMessage>, ISampleViewMessage
@@ -16,12 +16,12 @@ namespace Script.Page.SamplePage
         void OnClickOpenShop();
     }
 
-    public class SamplePageParam : PageParam
+    public class PageSampleParam : PageParam
     {
 
     }
 
-    public class SamplePageResult : PageResult
+    public class PageSampleResult : PageResult
     {
 
     }

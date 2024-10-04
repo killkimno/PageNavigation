@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Script.Page;
+using Script.Page.PageSample;
 using Script.Page.PageShop;
-using Script.Page.SamplePage;
 
 namespace Script.Base.Navigator
 {
@@ -24,7 +24,7 @@ namespace Script.Base.Navigator
         {
             //TODO : 코드젠을 이용해서 연결해 줘야한다
             //이 샘플에서는 수동으로 대입한다
-            _mapper.Add(PageType.Sample, typeof(SamplePagePresenter));
+            _mapper.Add(PageType.Sample, typeof(PageSamplePresenter));
             _mapper.Add(PageType.Shop, typeof(PageShopPresenter));
 
         }

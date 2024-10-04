@@ -1,10 +1,9 @@
-﻿using Script.Base.Page;
-using Script.Base.Page.View;
+﻿using Script.Base.Page.View;
 using UnityEngine;
 
-namespace Script.Page.SamplePage
+namespace Script.Page.PageSample
 {
-    public class SamplePageView : ViewBase, ISampleView
+    public class PageSampleView : ViewBase, ISampleView
     {
         [SerializeField]
         private GameObject go;

@@ -4,12 +4,12 @@ using Script.Base.Page;
 using Script.Base.Page.Presenter;
 using UnityEngine;
 
-namespace Script.Page.SamplePage
+namespace Script.Page.PageSample
 {
     [PrefabPath("Prefab/PageSample")]
-    public class SamplePagePresenter : BasePresenter, ISampleViewMessage
+    public class PageSamplePresenter : BasePresenter, ISampleViewMessage
     {
-        public SamplePagePresenter(ISampleView view, PageNavigator pageNavigator) : base(pageNavigator, view)
+        public PageSamplePresenter(ISampleView view, PageNavigator pageNavigator) : base(pageNavigator, view)
         {
             view.SetViewMessage(this);
             UnityEngine.Debug.Log("BasePresenter");
