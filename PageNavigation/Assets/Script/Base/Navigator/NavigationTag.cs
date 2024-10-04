@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Script.Base.Page;
 using Script.Page;
 
 namespace Script.Base.Navigator
@@ -7,7 +8,9 @@ namespace Script.Base.Navigator
     {
         //마지막으로 열린 ui의 테그 -> tag를 사용하고 있는데 또다시 새로운 ui가 열리면 문제가 발생한다 -> 해당 사항은 고려를 안 한다
         public PageType PageType { get; }
+        public PageResult PageResult { get; private set; }
         public bool Closed { get; private set; } = false;
+
 
         public NavigationTag(PageType pageType)
         {
@@ -17,6 +20,11 @@ namespace Script.Base.Navigator
         public void SetClosed()
         {
             Closed = true;
+        }
+
+        public void SetResult(PageResult pageResult)
+        {
+            PageResult = pageResult;
         }
 
         public async UniTask AwaitAsync()

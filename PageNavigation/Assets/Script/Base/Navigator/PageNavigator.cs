@@ -96,6 +96,21 @@ namespace Script.Base.Navigator
             }
         }
 
+        /// <summary>
+        /// 페이지를 닫았을 때 결과를 저장한다 - 마지막 네비게이션 테그에 저장한다
+        /// </summary>
+        /// <param name="pageResult"></param>
+        public void SetResult(PageResult pageResult)
+        {
+            if (_pageList.Count == 0)
+            {
+                return;
+            }
+
+            var lastNavigationTag = _pageList.Last().NavigationTag;
+            lastNavigationTag.SetResult(pageResult);
+        }
+
         private IPresenter ResolvePresent<TPresenter>(GameObject obj) where TPresenter : IPresenter
         {
             var childScope = obj.GetComponent<LifetimeScope>();
