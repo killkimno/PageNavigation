@@ -1,5 +1,6 @@
 using Script.Base.Page;
 using Script.Base.Page.Presenter;
+using Script.Page;
 
 namespace Script.Base.Navigator
 {
@@ -7,6 +8,8 @@ namespace Script.Base.Navigator
     {
         public IPresenter Presenter { get; }
         public NavigationTag NavigationTag { get; }
+
+        public PageType PageType => NavigationTag.PageType;
 
         public ContainedPresenter(IPresenter presenter, NavigationTag navigationTag)
         {

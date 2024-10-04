@@ -49,6 +49,12 @@ namespace Script.Base.Page.Presenter
 
         public virtual void DestroyView() => _uIView.DestroyView();
 
+        public virtual void InitData(PageParam param)
+        {
+
+        }
+
+
         public void EnableView(bool enable) => _uIView.EnableView(enable);
 
         public void SetRoot(Transform transform) => _uIView.SetRoot(transform);
