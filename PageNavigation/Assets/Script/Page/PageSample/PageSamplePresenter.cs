@@ -7,6 +7,7 @@ using UnityEngine;
 namespace Script.Page.PageSample
 {
     [PrefabPath("Prefab/PageSample")]
+    [PageLayer(PageLayerType.Page)]
     public class PageSamplePresenter : BasePresenter, ISampleViewMessage
     {
         public PageSamplePresenter(ISampleView view, PageNavigator pageNavigator) : base(pageNavigator, view)

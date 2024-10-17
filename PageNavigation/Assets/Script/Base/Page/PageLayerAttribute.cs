@@ -4,9 +4,9 @@ namespace Script.Base.Page
 {
     public class PageLayerAttribute : Attribute
     {
-        public int Layer { get; }
+        public PageLayerType Layer { get; }
 
-        public PageLayerAttribute(int layer)
+        public PageLayerAttribute(PageLayerType layer)
         {
             Layer = layer;
         }

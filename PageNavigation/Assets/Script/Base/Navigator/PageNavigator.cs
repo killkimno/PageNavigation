@@ -35,6 +35,12 @@ namespace Script.Base.Navigator
         {
             var type = _resourceMapper.GetPageType(pageType);
             var pathAttribute = type.GetCustomAttribute<PrefabPathAttribute>();
+            var layerAttribute = type.GetCustomAttribute<PageLayerAttribute>();
+
+            if (layerAttribute == null)
+            {
+                throw new NullReferenceException($"Type : {pageType} / Page layer attribute is missing.");
+            }
 
             //TODO : 리소스 로드 매니져가 필요하다 하지만 여기선 안 쓴다
             var resource = await Resources.LoadAsync<GameObject>(pathAttribute.Path);
@@ -55,7 +61,9 @@ namespace Script.Base.Navigator
             presenter.InitData(pageParam);
             await presenter.OnBeforeOpenAsync();
             presenter.EnableView(true);
-            presenter.SetRoot(_pageRoot.transform);
+            
+            var rootTransform = GetLayerRoot(layerAttribute.Layer);
+            presenter.SetRoot(rootTransform);
 
             if (hidePrevious && _pageList.Count > 0)
             {
@@ -72,6 +80,8 @@ namespace Script.Base.Navigator
 
             return navigationTag;
         }
+
+        private Transform GetLayerRoot(PageLayerType layerType) => _pageRoot.GetLayer((int)layerType);
 
         public async UniTask CloseAsync()
         {
