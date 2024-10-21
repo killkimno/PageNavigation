@@ -4,6 +4,7 @@ using Script.Base.Page;
 using Script.Base.Page.Presenter;
 using Script.Base.Page.View;
 using Script.Page.DialogueConfirm;
+using UnityEngine;
 
 namespace Script.Page.PageShop
 {
@@ -24,9 +25,16 @@ namespace Script.Page.PageShop
             DoTryClose();
         }
 
-        public void OnClickOpenDialogue()
+        public void OnClickOpenDialogue() => UniTask.Void(async () =>
         {
-            _pageNavigator.OpenAsync(PageType.Dialogue, new DialogueConfirmParam("Test", true)).Forget();
-        }
+            var tag = await _pageNavigator.OpenAsync(PageType.Dialogue, new DialogueConfirmParam("Test", true));
+
+            await tag.AwaitAsync();
+
+            if (tag.PageResult is DialogueConfirmResult result)
+            {
+                Debug.Log(result.Confirm);
+            }
+        });
     }
 }

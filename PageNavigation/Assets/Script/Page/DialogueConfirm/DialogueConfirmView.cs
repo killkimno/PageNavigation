@@ -1,7 +1,6 @@
 using Script.Base.Page.View;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Script.Page.DialogueConfirm
 {

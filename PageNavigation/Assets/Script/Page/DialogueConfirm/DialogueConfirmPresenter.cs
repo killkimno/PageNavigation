@@ -46,12 +46,14 @@ namespace Script.Page.DialogueConfirm
 
         public void OnClickOk()
         {
-            throw new System.NotImplementedException();
+            _pageNavigator.SetResult(new DialogueConfirmResult(true));
+            DoTryClose();
         }
 
         public void OnClickCancel()
         {
-            throw new System.NotImplementedException();
+            _pageNavigator.SetResult(new DialogueConfirmResult(false));
+            DoTryClose();
         }
     }
 }
