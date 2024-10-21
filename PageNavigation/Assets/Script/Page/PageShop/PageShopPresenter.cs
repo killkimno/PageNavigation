@@ -9,7 +9,8 @@ using UnityEngine;
 namespace Script.Page.PageShop
 {
     [PrefabPath("Prefab/PageShop")]
-    [PageLayer(0)]
+    [PageLayer(PageLayerType.Page)]
+    [PageTransparent(true)]
     public class PageShopPresenter : BasePresenter, IPageShopViewMessage
     {
         private readonly IUIView _view;

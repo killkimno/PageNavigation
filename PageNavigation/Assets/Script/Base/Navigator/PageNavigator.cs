@@ -23,7 +23,8 @@ namespace Script.Base.Navigator
 
         private List<NavigationTag> _navigationTags = new List<NavigationTag>();
 
-        public PageNavigator(LifetimeScope lifetimeScope, PageResourceMapper pageResourceMapper, Transform disableRoot, PageRoot pageRoot)
+        public PageNavigator(LifetimeScope lifetimeScope, PageResourceMapper pageResourceMapper, Transform disableRoot,
+            PageRoot pageRoot)
         {
             _lifetimeScope = lifetimeScope;
             _resourceMapper = pageResourceMapper;
@@ -36,10 +37,15 @@ namespace Script.Base.Navigator
             var type = _resourceMapper.GetPageType(pageType);
             var pathAttribute = type.GetCustomAttribute<PrefabPathAttribute>();
             var layerAttribute = type.GetCustomAttribute<PageLayerAttribute>();
-
+            var transparentAttribute = type.GetCustomAttribute<PageTransparentAttribute>();
             if (layerAttribute == null)
             {
                 throw new NullReferenceException($"Type : {pageType} / Page layer attribute is missing.");
+            }
+
+            if (transparentAttribute == null)
+            {
+                throw new NullReferenceException($"Type : {pageType} / Page transparent attribute is missing.");
             }
 
             //TODO : 리소스 로드 매니져가 필요하다 하지만 여기선 안 쓴다
@@ -56,12 +62,12 @@ namespace Script.Base.Navigator
             //1.2 이전게 없는가 -> 넘어간다
             //2 push 작업
 
-            bool hidePrevious = true;
+            bool hidePrevious = transparentAttribute.IsTransparent;
 
             presenter.InitData(pageParam);
             await presenter.OnBeforeOpenAsync();
             presenter.EnableView(true);
-            
+
             var rootTransform = GetLayerRoot(layerAttribute.Layer);
             presenter.SetRoot(rootTransform);
 

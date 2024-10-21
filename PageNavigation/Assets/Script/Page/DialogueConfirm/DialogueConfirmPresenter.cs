@@ -8,11 +8,14 @@ namespace Script.Page.DialogueConfirm
 {
     [PrefabPath("Prefab/DialogueConfirm")]
     [PageLayer(PageLayerType.Dialogue)]
+    [PageTransparent(false)]
     public class DialogueConfirmPresenter : BasePresenter, IDialogueConfirmViewMessage
     {
         private readonly IDialogueConfirmView _view;
         private DialogueConfirmParam _data;
-        public DialogueConfirmPresenter(PageNavigator pageNavigator, IDialogueConfirmView view) : base(pageNavigator, view)
+
+        public DialogueConfirmPresenter(PageNavigator pageNavigator, IDialogueConfirmView view) : base(pageNavigator,
+            view)
         {
             _view = view;
             view.SetViewMessage(this);
@@ -41,6 +44,7 @@ namespace Script.Page.DialogueConfirm
             {
                 _view.RenderTwoButtonType();
             }
+
             await base.OnBeforeOpenAsync();
         }
 

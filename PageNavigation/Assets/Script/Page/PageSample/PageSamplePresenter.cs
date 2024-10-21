@@ -8,6 +8,7 @@ namespace Script.Page.PageSample
 {
     [PrefabPath("Prefab/PageSample")]
     [PageLayer(PageLayerType.Page)]
+    [PageTransparent(true)]
     public class PageSamplePresenter : BasePresenter, ISampleViewMessage
     {
         public PageSamplePresenter(ISampleView view, PageNavigator pageNavigator) : base(pageNavigator, view)
