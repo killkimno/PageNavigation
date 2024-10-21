@@ -1,4 +1,5 @@
 using Script.Base.Page.View;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ namespace Script.Page.DialogueConfirm
     public class DialogueConfirmView : ViewBase, IDialogueConfirmView
     {
         [SerializeField] 
-        private Text _lbMessage;
+        private TMP_Text _lbMessage;
 
         [SerializeField] private GameObject _oneButtonType;
         [SerializeField] private GameObject _twoButtonType;

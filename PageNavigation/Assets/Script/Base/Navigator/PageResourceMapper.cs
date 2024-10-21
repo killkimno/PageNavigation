@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Script.Page;
+using Script.Page.DialogueConfirm;
 using Script.Page.PageSample;
 using Script.Page.PageShop;
 
@@ -26,7 +27,7 @@ namespace Script.Base.Navigator
             //이 샘플에서는 수동으로 대입한다
             _mapper.Add(PageType.Sample, typeof(PageSamplePresenter));
             _mapper.Add(PageType.Shop, typeof(PageShopPresenter));
-
+            _mapper.Add(PageType.Dialogue, typeof(DialogueConfirmPresenter));
         }
     }
 }

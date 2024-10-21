@@ -11,6 +11,11 @@ namespace Script.Page.PageShop
         {
             _message = message;
         }
+        
+        public void OnClickOpenDialogue()
+        {
+            _message.OnClickOpenDialogue();
+        }
 
         public void OnClickBack() => _message.OnClickBack();
     }

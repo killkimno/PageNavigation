@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
 using Script.Base.Navigator;
 using Script.Base.Page;
 using Script.Base.Page.Presenter;
 using Script.Base.Page.View;
+using Script.Page.DialogueConfirm;
 
 namespace Script.Page.PageShop
 {
@@ -20,6 +22,11 @@ namespace Script.Page.PageShop
         public void OnClickBack()
         {
             DoTryClose();
+        }
+
+        public void OnClickOpenDialogue()
+        {
+            _pageNavigator.OpenAsync(PageType.Dialogue, new DialogueConfirmParam("Test", true)).Forget();
         }
     }
 }

@@ -3,6 +3,7 @@
     public enum PageType
     {
         Sample,
-        Shop
+        Shop,
+        Dialogue
     }
 }
